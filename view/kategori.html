@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kategori</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body class="min-h-screen font-body antialiased text-slate-800">
+
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 z-20 w-full border-b border-default bg-neutral-primary"
+    >
+      <div
+        class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4"
+      >
+        <a href="home.html" class="flex items-center space-x-3">
+          <img src="../asset/Logo.jpg" class="h-7" alt="Aksarise Logo" />
+          <span
+            class="self-center whitespace-nowrap text-xl font-semibold text-heading"
+            >Aksarise</span
+          >
+        </a>
+
+        <div class="order-1 flex flex-1 items-center justify-center px-4">
+          <div class="relative w-full max-w-2xl">
+            <i
+              data-feather="search"
+              class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+            ></i>
+            <input
+              type="text"
+              id="search"
+              placeholder="Cari buku, penulis, atau kategori…"
+              class="block w-full rounded-full border border-slate-200 bg-slate-50 py-2.5 ps-10 pe-4 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#112D4E] focus:ring-1 focus:ring-[#112D4E] outline-none transition"
+            />
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-3 md:order-2">
+          <a
+            href="cart.html"
+            type="button"
+            class="hidden items-center justify-center rounded-full p-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900 md:flex cursor-pointer"
+          >
+            <i data-feather="shopping-cart" class="h-5 w-5"></i>
+          </a>
+          <button
+            id="profileBtn"
+            class="hidden items-center justify-center rounded-full p-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900 md:flex cursor-pointer"
+          >
+            <i data-feather="user" class="h-5 w-5"></i>
+          </button>
+          <button
+            type="button"
+            data-collapse-toggle="navbar-search"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+            class="flex h-10 w-10 items-center justify-center rounded-base border border-transparent text-body hover:bg-neutral-secondary-medium hover:text-heading md:hidden"
+          >
+            <i data-feather="menu" class="h-5 w-5 text-slate-600"></i>
+            <span class="sr-only">Search</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SIDEBAR -->
+    <div
+      id="sidebarOverlay"
+      class="fixed inset-0 z-30 bg-black/50 hidden transition-opacity duration-300"
+    ></div>
+
+    <aside
+      id="profileSidebar"
+      class="fixed top-0 right-0 z-40 h-screen w-80 translate-x-full bg-white p-6 shadow-2xl transition-transform duration-300 border-l border-slate-100 flex flex-col justify-between"
+    >
+      <div>
+        <div
+          class="flex items-center justify-between border-b border-slate-100 pb-4"
+        >
+          <h2 class="text-lg font-bold text-[#112D4E]">Profil Pengguna</h2>
+          <button
+            id="closeSidebar"
+            class="rounded-lg p-1.5 text-slate-400 hover:bg-slate-50 hover:text-slate-700 transition cursor-pointer"
+          >
+            <i data-feather="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+
+        <div
+          class="mt-6 flex items-center gap-4 border-b border-slate-100 pb-5"
+        >
+          <div
+            class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-100 border border-slate-200"
+          >
+            <i data-feather="user" class="text-[#0F4C75] h-5 w-5"></i>
+          </div>
+          <div class="overflow-hidden">
+            <p class="font-semibold text-slate-800 truncate">argazanuar1</p>
+            <p class="text-xs text-slate-400 truncate">argazanuar1@gmail.com</p>
+          </div>
+        </div>
+
+        <nav class="mt-5 space-y-1">
+          <a
+            href="profil.html"
+            class="flex items-center gap-3 rounded-xl px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#112D4E] transition font-medium"
+          >
+            <i data-feather="settings" class="h-4 w-4"></i> Profil & Akun Saya
+          </a>
+          <a
+            href="riwayat.html"
+            class="flex items-center gap-3 rounded-xl px-4 py-3 text-slate-600 hover:bg-slate-50 hover:text-[#112D4E] transition font-medium"
+          >
+            <i data-feather="file-text" class="h-4 w-4"></i> Riwayat Transaksi
+          </a>
+        </nav>
+      </div>
+
+      <div class="border-t border-slate-100 pt-4">
+        <a
+          href="login.html"
+          class="flex items-center justify-center gap-2 rounded-xl bg-red-50 py-2.5 text-sm font-semibold text-red-600 hover:bg-red-100 transition"
+        >
+          <i data-feather="log-out" class="h-4 w-4"></i> Keluar Akun
+        </a>
+      </div>
+    </aside>
+
+    <section class="pt-28 pb-10">
+      <div class="mx-auto max-w-screen-xl px-6">
+
+        <!-- KE BERANDA -->
+        <div class="mb-5">
+          <a
+            href="home.html"
+            class="inline-flex items-center gap-2 text-sm font-medium text-[#0F4C75] hover:text-[#112D4E] transition group"
+          >
+            <i
+              data-feather="arrow-left"
+              class="w-4 h-4 transition-transform group-hover:-translate-x-1"
+            ></i>
+            Kembali ke Beranda
+          </a>
+        </div>
+
+         <!-- TEXT -->
+        <div class="mb-10">
+          <h2 class="font-display text-4xl font-medium text-[#112D4E] mb-1">
+            Jelajahi koleksi
+            <em class="not-italic text-[#0F4C75]">favoritmu</em>
+          </h2>
+          <p class="text-slate-500 text-sm">
+            Pilih kategori yang paling sesuai dengan minat baca Anda hari ini
+          </p>
+        </div>
+
+        
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+
+          <!-- FIKSI -->
+          <a
+            data-category="Fiksi"
+            class="category-btn flex flex-col items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center"
+            >
+              <img
+                src="../asset/science-fiction.png"
+                alt="Fiksi"
+                class="h-10 w-10 object-contain"
+              />
+            </div>
+            <h3 class="text-sm font-bold text-[#112D4E]">Fiksi</h3>
+          </a>
+
+          <!-- ACTION -->
+          <a
+            data-category="Action"
+            class="category-btn flex flex-col items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center"
+            >
+              <img
+                src="../asset/action.png"
+                alt="Action"
+                class="h-10 w-10 object-contain"
+              />
+            </div>
+            <h3 class="text-sm font-bold text-[#112D4E]">Action</h3>
+          </a>
+
+          <!-- SEJARAH -->
+          <a
+            data-category="Sejarah"
+            class="category-btn flex flex-col items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center"
+            >
+              <img
+                src="../asset/history.png"
+                alt="Sejarah"
+                class="h-10 w-10 object-contain"
+              />
+            </div>
+            <h3 class="text-sm font-bold text-[#112D4E]">Sejarah</h3>
+          </a>
+
+          <!-- ROMANSA -->
+          <a
+            data-category="Romansa"
+            class="category-btn flex flex-col items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center"
+            >
+              <img
+                src="../asset/romance.png"
+                alt="Romansa"
+                class="h-10 w-10 object-contain"
+              />
+            </div>
+            <h3 class="text-sm font-bold text-[#112D4E]">Romansa</h3>
+          </a>
+
+          <!-- PENGETAHUAN -->
+          <a
+            data-category="Pengetahuan"
+            class="category-btn flex flex-col items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center"
+            >
+              <img
+                src="../asset/knowledge.png"
+                alt="Pengetahuan"
+                class="h-10 w-10 object-contain"
+              />
+            </div>
+            <h3 class="text-sm font-bold text-[#112D4E]">Pengetahuan</h3>
+          </a>
+
+          <!-- DRAMA -->
+          <a
+            data-category="Drama"
+            class="category-btn flex flex-col items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-slate-100 flex items-center justify-center"
+            >
+              <img
+                src="../asset/drama.png"
+                alt="Drama"
+                class="h-10 w-10 object-contain"
+              />
+            </div>
+            <h3 class="text-sm font-bold text-[#112D4E]">Drama</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-24">
+      <div class="mx-auto max-w-screen-xl px-6">
+
+        <!-- TEXT -->
+        <div
+          class="flex items-center justify-between border-b border-slate-200 pb-4 mb-6"
+        >
+          <h3 class="text-lg font-bold text-[#112D4E] flex items-center gap-2">
+            <i data-feather="book-open" class="w-5 h-5"></i> Daftar Buku
+            Tersedia
+          </h3>
+          <span
+            id="categoryLabel"
+            class="text-xs font-semibold bg-[#112D4E] text-white px-3 py-1 rounded-full"
+            >Semua Kategori</span
+          >
+        </div>
+
+        <!-- PRODUK -->
+        <div
+          id="productGrid"
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"
+        ></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <section id="hubungi-kami" class="relative overflow-hidden text-white">
+        <img
+          src="../asset/bg-book.jpg"
+          alt="Background"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-[#112D4E]/90"></div>
+
+        <div
+          class="relative mx-auto grid max-w-7xl gap-14 px-6 py-24 md:grid-cols-2"
+        >
+          <div>
+            <div class="mb-10 flex items-center gap-4">
+              <img
+                src="../asset/Logo.jpg"
+                alt="Logo"
+                class="h-24 w-24 rounded-full"
+              />
+              <h3 class="font-serif text-2xl font-semibold">Aksarise</h3>
+            </div>
+            <p class="max-w-lg text-lg leading-relaxed text-gray-200">
+              Aksarise menyediakan layanan pembelian buku secara online sehingga
+              pembeli dapat mencari dan membeli buku kapan saja tanpa harus
+              datang ke toko fisik. Aksarise memudahkan pembeli dalam menemukan
+              buku yang sesuai.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="mb-8 text-2xl font-semibold">Hubungi Kami</h3>
+            <div class="space-y-6 text-base text-gray-200 md:text-lg">
+              <div class="flex items-center gap-4">
+                <i data-feather="mail" class="h-6 w-6"></i>
+                <span>support@aksarise.id</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <i data-feather="phone" class="h-6 w-6"></i>
+                <span>+62 812-3456-7890</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <i data-feather="map-pin" class="h-6 w-6"></i>
+                <span>Depok, Indonesia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="flex flex-col items-center justify-between gap-4 bg-[#0F4C75] px-6 py-5 md:flex-row"
+      >
+        <span class="text-sm text-white/80"
+          >© 2026 Aksarise. All rights reserved.</span
+        >
+        <div class="flex items-center gap-2">
+          <a
+            href="#"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition hover:-translate-y-0.5"
+          >
+            <i data-feather="youtube" class="h-4 w-4"></i>
+          </a>
+          <a
+            href="#"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition hover:-translate-y-0.5"
+          >
+            <i data-feather="linkedin" class="h-4 w-4"></i>
+          </a>
+          <a
+            href="#"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition hover:-translate-y-0.5"
+          >
+            <i data-feather="instagram" class="h-4 w-4"></i>
+          </a>
+          <a
+            href="#"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition hover:-translate-y-0.5"
+          >
+            <i data-feather="github" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script/kategori.js"></script>
+    <script>
+      feather.replace()
+    </script>
+  </body>
+</html>

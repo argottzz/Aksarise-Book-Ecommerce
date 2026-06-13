@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/output.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Keranjang</title>
+  </head>
+
+  <body class="min-h-screen bg-slate-50 text-slate-800">
+
+    <main class="max-w-7xl mx-auto pt-10 px-6 pb-10">
+       <div class="max-w-screen-xl mx-auto mb-6">
+
+        <!-- KE BERANDA -->
+        <a
+          href="home.html"
+          class="inline-flex items-center gap-2 text-[#0F4C75] hover:text-[#112D4E] transition group font-semibold"
+        >
+          <i data-feather="arrow-left" class="w-5 h-5 transition-transform group-hover:-translate-x-1"></i>
+          <span>Kembali ke Beranda</span>
+        </a>
+      </div>
+
+      <!-- KERANJANG -->
+      <div class="flex flex-col lg:flex-row gap-8 items-start">
+        <section class="flex-1 w-full">
+          
+        <!-- PRODUK -->
+          <div id="cartItems" class="space-y-4"></div>
+        </section>
+
+        <!-- RINGKASAN BELANJA -->
+        <aside
+          id="ringkasanBelanja"
+          class="w-full lg:max-w-sm bg-white p-6 rounded-2xl border border-slate-200 shadow-sm top-10"
+        >
+          <h2 class="text-lg font-bold mb-4">Ringkasan Keranjang</h2>
+          <div class="space-y-3 mb-6 text-sm">
+            <div class="flex justify-between">
+              <span class="text-slate-500"
+                >Total Harga (<span id="totalItem">0</span> barang)</span
+              >
+              <span id="subtotalText" class="font-semibold text-slate-900"
+                >Rp 0</span
+              >
+            </div>
+          </div>
+          <button
+            onclick="prosesCheckout()"
+            id="checkoutButton"
+            class="flex items-center justify-center gap-2 w-full bg-[#112D4E] text-white py-3.5 rounded-2xl font-semibold shadow-md hover:bg-[#0F4C75] hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+          >
+            <i data-feather="credit-card" class="w-5 h-5"></i>
+            <span>Checkout Sekarang</span>
+          </button>
+        </aside>
+      </div>
+    </main>
+
+     <!-- FOOTER -->
+    <footer>
+      <!-- Hubungi Kami -->
+      <section id="hubungi-kami" class="relative overflow-hidden text-white">
+        <img
+          src="../asset/bg-book.jpg"
+          alt="Background"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-[#112D4E]/90"></div>
+
+        <div
+          class="relative mx-auto grid max-w-7xl gap-14 px-6 py-24 md:grid-cols-2"
+        >
+          <div>
+            <div class="mb-10 flex items-center gap-4">
+              <img
+                src="../asset/Logo.jpg"
+                alt="Logo"
+                class="h-24 w-24 rounded-full"
+              />
+              <h3 class="font-serif text-2xl font-semibold">Aksarise</h3>
+            </div>
+            <p class="max-w-lg text-lg leading-relaxed text-gray-200">
+              Aksarise menyediakan layanan pembelian buku secara online sehingga
+              pembeli dapat mencari dan membeli buku kapan saja tanpa harus
+              datang ke toko fisik. Aksarise memudahkan pembeli dalam menemukan
+              buku yang sesuai.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="mb-8 text-2xl font-semibold">Hubungi Kami</h3>
+            <div class="space-y-6 text-base text-gray-200 md:text-lg">
+              <div class="flex items-center gap-4">
+                <i data-feather="mail" class="h-6 w-6"></i>
+                <span>support@aksarise.id</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <i data-feather="phone" class="h-6 w-6"></i>
+                <span>+62 812-3456-7890</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <i data-feather="map-pin" class="h-6 w-6"></i>
+                <span>Depok, Indonesia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Bottom -->
+      <div
+        class="flex flex-col items-center justify-between gap-4 bg-[#0F4C75] px-6 py-5 md:flex-row"
+      >
+        <span class="text-sm text-white/80"
+          >© 2026 Aksarise. All rights reserved.</span
+        >
+        <div class="flex items-center gap-2">
+          <a
+            href="#"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition hover:-translate-y-0.5"
+          >
+            <i data-feather="youtube" class="h-4 w-4"></i>
+          </a>
+          <a
+            href="#"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition hover:-translate-y-0.5"
+          >
+            <i data-feather="linkedin" class="h-4 w-4"></i>
+          </a>
+          <a
+            href="#"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition hover:-translate-y-0.5"
+          >
+            <i data-feather="instagram" class="h-4 w-4"></i>
+          </a>
+          <a
+            href="#"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition hover:-translate-y-0.5"
+          >
+            <i data-feather="github" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="../script/cart.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

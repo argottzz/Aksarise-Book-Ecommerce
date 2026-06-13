@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aksarise - Buka Jendela Melalu Buku</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+
+  <body class="bg-white font-body">
+
+<!-- NAVBAR -->
+    <nav
+      class="fixed top-0 z-20 w-full bg-white backdrop-blur-md border-b border-slate-200/70 shadow-sm"
+    >
+      <div
+        class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between px-6 py-3 gap-3"
+      >
+        <a href="view/home.html" class="flex items-center space-x-3">
+          <img src="../asset/Logo.jpg" class="h-7" alt="Aksarise Logo" />
+          <span
+            class="self-center whitespace-nowrap text-xl font-semibold text-heading"
+            >Aksarise</span
+          >
+        </a>
+
+        <div class="order-1 flex flex-1 items-center justify-center px-4">
+          <div class="relative w-full max-w-2xl">
+            <i
+              data-feather="search"
+              class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+            ></i>
+            <input
+              type="text"
+              id="search"
+              placeholder="Cari buku, penulis, atau kategori…"
+              class="block w-full rounded-full border border-slate-200 bg-slate-50 py-2.5 ps-10 pe-4 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#112D4E] focus:ring-1 focus:ring-[#112D4E] outline-none transition"
+            />
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 md:order-2">
+          <a
+            href="/view/login.html"
+            class="text-[#112D4E] border border-[#112D4E] px-4 py-2 rounded-full text-sm font-medium hover:bg-[#112D4E] hover:text-white transition"
+          >
+            Masuk
+          </a>
+          <a
+            href="/view/daftar.html"
+            class="text-white bg-[#112D4E] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#0F4C75] transition"
+          >
+            Daftar
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+<!-- HERO -->
+      <section
+        class="relative pt-24 pb-16 lg:pt-32 lg:pb-24 text-white bg-linear-to-br from-[#112D4E] via-[#0F4C75] to-[#1E5F8A] overflow-hidden"
+      >
+        <div
+          class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-sky-400/10 blur-[120px] rounded-full pointer-events-none"
+        ></div>
+        <div
+          class="absolute bottom-0 right-0 w-75 h-75 bg-yellow-400/5 blur-[100px] rounded-full pointer-events-none"
+        ></div>
+
+        <div
+          class="relative mx-auto max-w-screen-xl px-6 grid md:grid-cols-2 gap-12 lg:gap-8 items-center"
+        >
+          <div class="animate-fade-up space-y-6 max-w-xl">
+            <div
+              class="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md rounded-full px-4 py-1.5 text-xs font-medium text-sky-200"
+            >
+              <i data-feather="star" class="w-3.5 h-3.5 text-yellow-400 fill-yellow-400 animate-pulse"></i>
+              Temukan Inspirasi di Setiap Halaman
+            </div>
+
+            <h1
+              class="font-display text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight"
+            >
+              Buka Jendela Dunia <br />
+              <span
+                class="bg-linear-to-r from-yellow-300 via-amber-200 to-white bg-clip-text text-transparent italic font-serif font-normal"
+              >
+                Melalui Buku
+              </span>
+            </h1>
+
+            <p
+              class="text-slate-200/80 text-base lg:text-lg leading-relaxed max-w-md"
+            >
+              Temukan ribuan buku pilihan mulai dari novel, pendidikan,
+              pengembangan diri, hingga teknologi hanya di
+              <span class="text-yellow-300 font-semibold">Aksarise</span>.
+            </p>
+
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a
+                href="view/login.html"
+                class="group bg-yellow-400 hover:bg-yellow-300 text-[#112D4E] font-bold px-8 py-3.5 rounded-full shadow-lg shadow-yellow-500/20 transition-all duration-300 flex items-center gap-2 text-sm transform hover:-translate-y-0.5"
+              >
+                Jelajahi Katalog
+                <i data-feather="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+              </a>
+            </div>
+
+            <div
+              class="flex items-center gap-6 lg:gap-8 pt-6 border-t border-white/10"
+            >
+              <div>
+                <div
+                  class="font-display text-2xl lg:text-3xl font-extrabold text-white"
+                >
+                  10K+
+                </div>
+                <div
+                  class="text-slate-300/70 text-xs mt-0.5 tracking-wide uppercase"
+                >
+                  Judul Buku
+                </div>
+              </div>
+              <div class="w-px h-8 bg-white/20"></div>
+              <div>
+                <div
+                  class="font-display text-2xl lg:text-3xl font-extrabold text-white"
+                >
+                  50K+
+                </div>
+                <div
+                  class="text-slate-300/70 text-xs mt-0.5 tracking-wide uppercase"
+                >
+                  Pelanggan Setia 
+                </div>
+              </div>
+              <div class="w-px h-8 bg-white/20"></div>
+              <div>
+                <div
+                  class="font-display text-2xl lg:text-3xl font-extrabold text-yellow-400"
+                >
+                  4.9★
+                </div>
+                <div
+                  class="text-slate-300/70 text-xs mt-0.5 tracking-wide uppercase"
+                >
+                  Rating
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="animate-fade-up delay-200 relative flex items-center justify-center min-h-87.5 lg:min-h-100"
+          >
+            <div
+              class="absolute w-52 h-72 bg-linear-to-tr from-[#0F4C75] to-[#3282B4] rounded-2xl shadow-2xl rotate-12 -translate-x-12 translate-y-4 opacity-40 border border-white/10 hidden sm:block"
+            ></div>
+            <div
+              class="absolute w-52 h-72 bg-linear-to-bl from-[#112D4E] to-[#0F4C75] rounded-2xl shadow-2xl rotate-6 translate-x-8 -translate-y-4 opacity-60 border border-white/10 hidden sm:block"
+            ></div>
+
+            <div
+              class="relative w-full max-w-sm bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 lg:p-10 text-white text-center shadow-2xl transform hover:scale-[1.02] transition-transform duration-300 z-10"
+            >
+              <div
+                class="absolute -top-4 -right-4 bg-red-500 text-white text-xs font-extrabold px-3 py-1.5 rounded-full shadow-lg tracking-wider uppercase rotate-12 animate-bounce"
+              >
+                Terbatas!
+              </div>
+
+              <div
+                class="text-7xl font-display font-black text-yellow-400 drop-shadow-md mb-2 tracking-tight"
+              >
+                30%
+              </div>
+              <div
+                class="text-xl font-bold tracking-wide uppercase text-amber-200 mb-3"
+              >
+                Potongan Harga
+              </div>
+
+              <p class="text-slate-100 text-sm leading-relaxed mb-6">
+                Khusus untuk koleksi buku
+                <strong
+                  class="text-white underline decoration-yellow-400 decoration-2"
+                  >Best Seller</strong
+                >
+                fiksi, nonfiksi, serta edukasi pilihan minggu ini.
+              </p>
+
+              <a
+                href="view/login.html"
+                class="inline-block w-full bg-white hover:bg-slate-100 text-[#112D4E] font-bold px-6 py-3.5 rounded-xl text-sm transition-colors duration-200 shadow-md"
+              >
+                Belanja Sekarang
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- ALASAN -->
+      <section class="bg-[#f0f4fa] py-20">
+        <div class="mx-auto max-w-screen-xl px-6">
+          <div class="text-center mb-12">
+            <p
+              class="text-[#0F4C75] text-xs font-semibold tracking-widest uppercase mb-2"
+            >
+              Mengapa Aksarise
+            </p>
+            <h2 class="font-display text-4xl text-[#112D4E] leading-tight">
+              Pengalaman membaca <em>tanpa batas</em>
+            </h2>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 cursor-pointer">
+            <div
+              class="bg-white rounded-2xl p-7 border border-slate-100 transition-transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+              >
+              <img src="/asset/buku.png" alt="google">
+              </div>
+              <h3 class="font-display font-bold text-[#112D4E] text-lg mb-2">
+                Koleksi Buku Lengkap
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                Ribuan judul dari berbagai genre dan penerbit terpercaya.
+              </p>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl p-7 border border-slate-100 transition-transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+              >
+                <img src="../asset/hargaMurah.png" alt="google">
+              </div>
+              <h3 class="font-display font-bold text-[#112D4E] text-lg mb-2">
+                Harga Terjangkau
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                Promo dan diskon menarik tersedia setiap minggunya.
+              </p>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl p-7 border border-slate-100 transition-transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+              >
+                <img src="../asset/pengiriman.png" alt="google">
+              </div>
+              <h3 class="font-display font-bold text-[#112D4E] text-lg mb-2">
+                Pengiriman Cepat
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                Dikirim dari gudang terdekat ke seluruh Indonesia.
+              </p>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl p-7 border border-slate-100 transition-transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+              >
+                <img src="../asset/pembayaranAman.png" alt="google">
+              </div>
+              <h3 class="font-display font-bold text-[#112D4E] text-lg mb-2">
+                Pembayaran Aman
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed">
+                Beragam metode pembayaran dengan enkripsi terjamin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- KATEGORI -->
+      <section class="py-20">
+        <div class="mx-auto max-w-screen-xl px-6">
+          <div class="mb-10">
+            <p
+              class="text-[#0F4C75] text-xs font-semibold tracking-widest uppercase mb-2"
+            >
+              Kategori
+            </p>
+            <h2 class="font-display text-4xl text-[#112D4E] mb-1">
+              Jelajahi koleksi <em>favoritmu</em>
+            </h2>
+            <p class="text-slate-500 text-sm">
+              Pilih kategori yang paling sesuai dengan minat baca Anda hari ini.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
+            <a
+              href="#"
+              class="flex flex-col items-center gap-4 rounded-2xl border border-[#0F4C75]/20 bg-slate-50 p-6 cursor-pointer transition-transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div
+                class="w-14 h-14 rounded-xl bg-[#112D4E]/8 bg-opacity-8 flex items-center justify-center"
+              >
+                <img
+                  src="../asset/science-fiction.png"
+                  alt="Fiksi"
+                  class="h-12 w-12 object-contain"
+                />
+              </div>
+              <h3 class="text-sm font-semibold text-[#112D4E]">Fiksi</h3>
+            </a>
+
+            <a
+              href="#"
+              class="flex flex-col items-center gap-4 rounded-2xl border border-[#0F4C75]/20 bg-slate-50 p-6 cursor-pointer transition-transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div
+                class="w-14 h-14 rounded-xl flex items-center justify-center"
+              >
+                <img
+                  src="../asset/action.png"
+                  alt="Action"
+                  class="h-12 w-12 object-contain"
+                />
+              </div>
+              <h3 class="text-sm font-semibold text-[#112D4E]">Action</h3>
+            </a>
+
+            <a
+              href="#"
+              class="flex flex-col items-center gap-4 rounded-2xl border border-[#0F4C75]/20 bg-slate-50 p-6 cursor-pointer transition-transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div
+                class="w-14 h-14 rounded-xl flex items-center justify-center"
+              >
+                <img
+                  src="../asset/history.png"
+                  alt="Sejarah"
+                  class="h-12 w-12 object-contain"
+                />
+              </div>
+              <h3 class="text-sm font-semibold text-[#112D4E]">Sejarah</h3>
+            </a>
+
+            <a
+              href="#"
+              class="flex flex-col items-center gap-4 rounded-2xl border border-[#0F4C75]/20 bg-slate-50 p-6 cursor-pointer transition-transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div
+                class="w-14 h-14 rounded-xl flex items-center justify-center"
+              >
+                <img
+                  src="../asset/romance.png"
+                  alt="Romansa"
+                  class="h-12 w-12 object-contain"
+                />
+              </div>
+              <h3 class="text-sm font-semibold text-[#112D4E]">Romansa</h3>
+            </a>
+
+            <a
+              href="#"
+              class="flex flex-col items-center gap-4 rounded-2xl border border-[#0F4C75]/20 bg-slate-50 p-6 cursor-pointer transition-transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div
+                class="w-14 h-14 rounded-xl flex items-center justify-center"
+              >
+                <img
+                  src="../asset/knowledge.png"
+                  alt="Pengetahuan"
+                  class="h-12 w-12 object-contain"
+                />
+              </div>
+              <h3 class="text-sm font-semibold text-[#112D4E]">Pengetahuan</h3>
+            </a>
+
+            <a
+              href="#"
+              class="flex flex-col items-center gap-4 rounded-2xl border border-[#0F4C75]/20 bg-slate-50 p-6 cursor-pointer transition-transform hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div
+                class="w-14 h-14 rounded-xl flex items-center justify-center"
+              >
+                <img
+                  src="../asset/drama.png"
+                  alt="Drama"
+                  class="h-12 w-12 object-contain"
+                />
+              </div>
+              <h3 class="text-sm font-semibold text-[#112D4E]">Drama</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+
+<!-- BEST SELLER -->
+      <section id="belanja" class="bg-[#f0f4fa] py-20">
+        <div class="mx-auto max-w-screen-xl px-6">
+          <div class="mb-8">
+            <p
+              class="text-[#0F4C75] text-xs font-semibold tracking-widest uppercase mb-2"
+            >
+              Best Seller
+            </p>
+            <h2 class="font-display text-4xl text-[#112D4E]">
+              Buku <em>paling dicari</em>
+            </h2>
+          </div>
+          <div
+            id="produkBestSeller"
+            class="mb-8 flex flex-wrap justify-between gap-y-6"
+          ></div>
+        </div>
+      </section>
+
+<!-- BUKU PILIHAN -->
+      <section class="bg-white py-20">
+        <div class="mx-auto max-w-screen-xl px-6">
+          <div class="mb-8 flex items-center justify-between">
+            <div>
+              <p
+                class="text-[#0F4C75] text-xs font-semibold tracking-widest uppercase mb-2"
+              >
+                Pilihan Editor
+              </p>
+              <h2 class="font-display text-4xl text-[#112D4E]">
+                Buku <em>Pilihan</em>
+              </h2>
+            </div>
+            <a
+              href="/view/login.html"
+              class="text-sm font-medium text-[#0F4C75] hover:text-[#112D4E] transition flex items-center gap-1"
+            >
+              Lihat Semua
+              <i data-feather="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+          <div
+            id="produkPilihan"
+            class="mb-8 flex flex-wrap justify-between gap-y-6"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+<!-- FOOTER -->
+    <footer>
+      <section id="hubungi-kami" class="relative overflow-hidden text-white">
+        <img
+          src="../asset/bg-book.jpg"
+          alt="Background"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-[#112D4E]/90"></div>
+
+        <div
+          class="relative mx-auto grid max-w-7xl gap-14 px-6 py-24 md:grid-cols-2"
+        >
+          <div>
+            <div class="mb-10 flex items-center gap-4">
+              <img
+                src="../asset/Logo.jpg"
+                alt="Logo"
+                class="h-24 w-24 rounded-full"
+              />
+              <h3 class="font-serif text-2xl font-semibold">Aksarise</h3>
+            </div>
+            <p class="max-w-lg text-lg leading-relaxed text-gray-200">
+              Aksarise menyediakan layanan pembelian buku secara online sehingga
+              pembeli dapat mencari dan membeli buku kapan saja tanpa harus
+              datang ke toko fisik. Aksarise memudahkan pembeli dalam menemukan
+              buku yang sesuai.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="mb-8 text-2xl font-semibold">Hubungi Kami</h3>
+            <div class="space-y-6 text-base text-gray-200 md:text-lg">
+              <div class="flex items-center gap-4">
+                <i data-feather="mail" class="h-6 w-6"></i>
+                <span>support@aksarise.id</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <i data-feather="phone" class="h-6 w-6"></i>
+                <span>+62 812-3456-7890</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <i data-feather="map-pin" class="h-6 w-6"></i>
+                <span>Depok, Indonesia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="flex flex-col items-center justify-between gap-4 bg-[#0F4C75] px-6 py-5 md:flex-row"
+      >
+        <span class="text-sm text-white/80"
+          >© 2026 Aksarise. All rights reserved.</span
+        >
+        <div class="flex items-center gap-2">
+          <a
+            href="#"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition hover:-translate-y-0.5"
+          >
+            <i data-feather="youtube" class="h-4 w-4"></i>
+          </a>
+          <a
+            href="#"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition hover:-translate-y-0.5"
+          >
+            <i data-feather="linkedin" class="h-4 w-4"></i>
+          </a>
+          <a
+            href="#"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition hover:-translate-y-0.5"
+          >
+            <i data-feather="instagram" class="h-4 w-4"></i>
+          </a>
+          <a
+            href="#"
+            class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition hover:-translate-y-0.5"
+          >
+            <i data-feather="github" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script/landingPage.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
