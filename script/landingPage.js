@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const rating = Number(item.rating || 0).toFixed(1);
 
           const card = document.createElement("a");
-          card.href = "login.html";
+          card.href = "/view/login.html";
           card.className = "group bg-white border border-slate-100 rounded-2xl p-4 w-full max-w-55 snap-start hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between cursor-pointer shadow-sm relative";
           
           card.innerHTML = rankHtml + 

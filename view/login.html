@@ -17,7 +17,7 @@
           <!-- TEXT LOGIN -->
           <div class="mb-10">
             <a
-              href="index.html"
+              href="/index.html"
               class="flex items-center gap-2 text-[#112D4E] mb-2"
             >
               <i data-feather="arrow-left"></i>
@@ -27,55 +27,36 @@
           </div>
 
           <!-- FORM LOGIN -->
-          <form
-            id="loginForm"
-            class="bg-gray-200 rounded-3xl p-8 max-w-md shadow-lg"
-          >
-            <!-- EMAIL -->
+          <form id="loginForm" class="bg-gray-200 rounded-3xl p-8 max-w-md shadow-lg">
             <div class="relative mb-4">
-              <i
-                data-feather="mail"
-                class="absolute left-4 top-1/2 -translate-y-1/2 text-[#0F4C75] w-5 h-5"
-              ></i>
+              <i data-feather="mail" class="absolute left-4 top-1/2 -translate-y-1/2 text-[#0F4C75] w-5 h-5"></i>
               <input
                 type="email"
+                id="email"
                 name="email"
-                required
                 placeholder="Email..."
                 class="w-full pl-12 pr-4 py-3 rounded-full border border-gray-400 outline-none shadow-inner text-[#2B2363]"
               />
             </div>
 
-            <!-- PASSWORD -->
-           <div class="relative mb-4">
-              <i
-                data-feather="lock"
-                class="absolute left-4 top-1/2 -translate-y-1/2 text-[#0F4C75] w-5 h-5"
-              ></i>
-
+            <div class="relative mb-4">
+              <i data-feather="lock" class="absolute left-4 top-1/2 -translate-y-1/2 text-[#0F4C75] w-5 h-5"></i>
               <input
                 type="password"
                 id="password"
-                required
                 placeholder="Password..."
                 class="w-full pl-12 pr-12 py-3 rounded-full border border-gray-400 outline-none shadow-inner text-[#0F4C75]"
               />
-
-              <i
-                data-feather="eye"
-                onclick="password('password', this)"
-                class="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-[#0F4C75] w-5 h-5"
-              ></i>
+              <i data-feather="eye" onclick="password('password', this)" class="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-[#0F4C75] w-5 h-5"></i>
             </div>
 
-            <!-- TOMBOL LOGIN -->
-           <a 
-            type="submit"
-            href="home.html"
-            class="block w-full text-center text-white bg-[#112D4E] hover:bg-[#0F4C75] py-3.5 rounded-xl font-bold transition-colors duration-200 shadow-md shadow-blue-900/10"
-          >
-            Masuk Sekarang
-          </a>
+            <button 
+              type="submit"
+              onclick="validasiLogin(event)"
+              class="block w-full text-center text-white bg-[#112D4E] hover:bg-[#0F4C75] py-3.5 cursor-pointer rounded-xl font-bold transition-colors duration-200 shadow-md shadow-blue-900/10"
+            >
+              Masuk Sekarang
+            </button>
           </form>
 
           <!-- OPSI LOGIN LAIN -->

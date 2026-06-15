@@ -31,15 +31,19 @@
         <div class="rounded-2xl bg-slate-50 p-4 text-left space-y-3 mb-8">
           <div class="flex justify-between items-center text-xs">
             <span class="text-slate-400 font-medium">ID Transaksi</span>
-            <span class="font-mono font-bold text-slate-700">#AKS-892410</span>
+            <span id="txId" class="font-mono font-bold text-slate-700">#AKS-892410</span>
           </div>
           <div class="flex justify-between items-center text-xs">
             <span class="text-slate-400 font-medium">Metode Pembayaran</span>
             <span class="font-semibold text-slate-700">E-Wallet (QRIS)</span>
           </div>
-          <div class="flex justify-between items-center text-xs border-t border-slate-200 pt-2.5">
+
+          <div id="daftarBarangDibeli" class="border-t border-b border-slate-200 py-2 my-2 space-y-1.5 text-xs">
+            </div>
+
+          <div class="flex justify-between items-center text-xs pt-1">
             <span class="text-slate-400 font-medium">Total Nominal</span>
-            <span class="text-sm font-extrabold text-[#112D4E]">Rp 147.000</span>
+            <span id="totalNominalTx" class="text-sm font-extrabold text-[#112D4E]">Rp 0</span>
           </div>
         </div>
 
@@ -62,6 +66,7 @@
       </div>
     </div>
     
+    <script src="../script/pembayaran.js"></script>
     <script>
       feather.replace();
     </script>

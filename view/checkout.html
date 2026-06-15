@@ -7,17 +7,24 @@
     <link rel="stylesheet" href="../src/output.css" />
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
-  
+
   <body class="min-h-screen bg-slate-50 font-body antialiased text-slate-800">
     <div class="mx-auto max-w-6xl px-4 py-8">
-      
       <!-- TEXT KEMBALI KE KERANJANG -->
       <div class="mb-6">
-        <a href="cart.html" class="inline-flex items-center gap-2 text-sm font-semibold text-[#112D4E] hover:text-[#0F4C75] transition group mb-2">
-          <i data-feather="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+        <a
+          href="cart.html"
+          class="inline-flex items-center gap-2 text-sm font-semibold text-[#112D4E] hover:text-[#0F4C75] transition group mb-2"
+        >
+          <i
+            data-feather="arrow-left"
+            class="w-4 h-4 transition-transform group-hover:-translate-x-1"
+          ></i>
           Kembali ke Keranjang
         </a>
-        <h1 class="text-2xl font-medium text-slate-900 tracking-tight">Checkout</h1>
+        <h1 class="text-2xl font-medium text-slate-900 tracking-tight">
+          Checkout
+        </h1>
       </div>
 
       <!-- TIDAK ADA PRODUK -->
@@ -25,93 +32,176 @@
         id="tidakAdaProduk"
         class="rounded-2xl border border-slate-200/80 bg-white p-12 text-center text-slate-500 shadow-sm hidden"
       >
-        <i data-feather="shopping-bag" class="w-12 h-12 mx-auto text-slate-300 mb-3"></i>
-        <p class="text-sm font-medium">Tidak ada produk yang dipilih untuk checkout.</p>
-        <a href="cart.html" class="mt-4 inline-block text-sm font-bold text-white bg-[#112D4E] px-5 py-2.5 rounded-xl hover:bg-[#0F4C75] transition">
+        <i
+          data-feather="shopping-bag"
+          class="w-12 h-12 mx-auto text-slate-300 mb-3"
+        ></i>
+        <p class="text-sm font-medium">
+          Tidak ada produk yang dipilih untuk checkout.
+        </p>
+        <a
+          href="cart.html"
+          class="mt-4 inline-block text-sm font-bold text-white bg-[#112D4E] px-5 py-2.5 rounded-xl hover:bg-[#0F4C75] transition"
+        >
           Pilih Produk Sekarang
         </a>
       </d>
 
       <div id="checkoutGrid" class="grid lg:grid-cols-12 gap-6 items-start">
         <div class="lg:col-span-8 space-y-4">
-          
           <!-- ALAMAT PENGIRIMAN -->
-          <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm">
-            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-2">
-              <i data-feather="map-pin" class="w-4 h-4 text-[#112D4E]"></i> Alamat Pengiriman
+          <div
+            class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm"
+          >
+            <h2
+              class="text-sm font-bold uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-2"
+            >
+              <i data-feather="map-pin" class="w-4 h-4 text-[#112D4E]"></i>
+              Alamat Pengiriman
             </h2>
             <div class="border-t border-slate-100 pt-3 text-sm">
-              <p class="font-bold text-slate-800">Arga Zanuar <span class="font-normal text-slate-400">| 08123456789</span></p>
-              <p class="text-slate-500 mt-1">Jl. Margonda Raya No. 100, Kecamatan Beji, Kota Depok, Jawa Barat, 16424</p>
+              <p class="font-bold text-slate-800">
+                Arga Zanuar
+                <span class="font-normal text-slate-400">| 08123456789</span>
+              </p>
+              <p class="text-slate-500 mt-1">
+                Jl. Margonda Raya No. 100, Kecamatan Beji, Kota Depok, Jawa
+                Barat, 16424
+              </p>
             </div>
           </div>
 
           <!-- RINCIAN PRODUK -->
-          <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm space-y-4">
-            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 flex items-center gap-2">
-              <i data-feather="box" class="w-4 h-4 text-[#112D4E]"></i> Rincian Produk
+          <div
+            class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm space-y-4"
+          >
+            <h2
+              class="text-sm font-bold uppercase tracking-wider text-slate-900 flex items-center gap-2"
+            >
+              <i data-feather="box" class="w-4 h-4 text-[#112D4E]"></i> Rincian
+              Produk
             </h2>
-            <div id="item" class="divide-y divide-slate-100 border-t border-slate-100">
-            </div>
+            <div
+              id="item"
+              class="divide-y divide-slate-100 border-t border-slate-100"
+            ></div>
           </div>
 
           <!-- METODE PEMBAYARAN -->
-          <div class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm">
-            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-2">
-              <i data-feather="credit-card" class="w-4 h-4 text-[#112D4E]"></i> Metode Pembayaran
+          <div
+            class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm"
+          >
+            <h2
+              class="text-sm font-bold uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-2"
+            >
+              <i data-feather="credit-card" class="w-4 h-4 text-[#112D4E]"></i>
+              Metode Pembayaran
             </h2>
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-slate-100 pt-3">
-              <label class="border border-[#112D4E] bg-[#112D4E]/5 rounded-xl p-3 flex flex-col items-center justify-center gap-1 cursor-pointer transition select-none">
-                <input type="radio" name="payment" checked class="hidden" />
-                <span class="text-xs font-bold text-[#112D4E]">Transfer Bank (VA)</span>
-              </label>
-              <label class="border border-slate-200 hover:border-slate-300 rounded-xl p-3 flex flex-col items-center justify-center gap-1 cursor-pointer transition select-none">
-                <input type="radio" name="payment" class="hidden" />
-                <span class="text-xs font-medium text-slate-600">E-Wallet (OVO/Dana)</span>
-              </label>
-              <label class="border border-slate-200 hover:border-slate-300 rounded-xl p-3 flex flex-col items-center justify-center gap-1 cursor-pointer transition select-none">
-                <input type="radio" name="payment" class="hidden" />
-                <span class="text-xs font-medium text-slate-600">QRIS</span>
-              </label>
+
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-slate-100 pt-3"
+            >
+              <div>
+                <input
+                  type="radio"
+                  id="payment_tf"
+                  name="payment"
+                  value="Transfer Bank"
+                  checked
+                  hidden
+                />
+                <label
+                  for="payment_tf"
+                  class="payment-option border border-slate-200 rounded-xl p-3 flex flex-col items-center justify-center gap-1 cursor-pointer transition select-none text-slate-600 text-xs font-medium"
+                >
+                  Transfer Bank (VA)
+                </label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="payment_ewallet"
+                  name="payment"
+                  value="E-Wallet"
+                  hidden
+                />
+                <label
+                  for="payment_ewallet"
+                  class="payment-option border border-slate-200 rounded-xl p-3 flex flex-col items-center justify-center gap-1 cursor-pointer transition select-none text-slate-600 text-xs font-medium"
+                >
+                  E-Wallet (OVO/Dana)
+                </label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="payment_qris"
+                  name="payment"
+                  value="QRIS"
+                  hidden
+                />
+                <label
+                  for="payment_qris"
+                  class="payment-option border border-slate-200 rounded-xl p-3 flex flex-col items-center justify-center gap-1 cursor-pointer transition select-none text-slate-600 text-xs font-medium"
+                >
+                  QRIS
+                </label>
+              </div>
             </div>
           </div>
-
         </div>
 
         <!-- RINGKASAN PEMBAYARAN -->
         <div class="lg:col-span-4 lg:top-6">
-          <div class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm space-y-4">
-            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900">Ringkasan Pembayaran</h2>
-            
+          <div
+            class="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm space-y-4"
+          >
+            <h2
+              class="text-sm font-bold uppercase tracking-wider text-slate-900"
+            >
+              Ringkasan Pembayaran
+            </h2>
+
             <div class="space-y-3 text-sm divide-y divide-slate-100">
               <div class="flex justify-between text-slate-500 pt-1">
                 <span>Total Harga Produk</span>
-                <span id="subtotalText" class="font-medium text-slate-800">Rp 0</span>
+                <span id="subtotalText" class="font-medium text-slate-800"
+                  >Rp 0</span
+                >
               </div>
               <div class="flex justify-between text-slate-500 pt-3">
                 <span>Biaya Layanan</span>
-                <span class="font-medium text-slate-800">Rp 1.000</span>
+                <span class="font-medium text-slate-800">Rp 3.000</span>
               </div>
               <div class="flex justify-between text-slate-500 pt-3">
                 <span>Biaya Pengiriman</span>
-                <span class="font-bold text-[#0F4C75] bg-sky-50 px-2 py-0.5 rounded text-xs font-bold">Gratis</span>
+                <span
+                  class="font-bold text-[#0F4C75] bg-sky-50 px-2 py-0.5 rounded text-xs font-bold"
+                  >Gratis</span
+                >
               </div>
               <div class="flex flex-col gap-1 pt-4">
-                <span class="text-slate-500 text-xs font-semibold uppercase">Total Pembayaran</span>
-                <span id="total" class="text-2xl font-extrabold text-[#112D4E]">Rp 0</span>
+                <span class="text-slate-500 text-xs font-semibold uppercase"
+                  >Total Pembayaran</span
+                >
+                <span id="total" class="text-2xl font-extrabold text-[#112D4E]"
+                  >Rp 0</span
+                >
               </div>
             </div>
 
-            <a href="pembayaran.html"
+            <button
+              onclick="selesaikanPembayaran(event)"
               id="buttonPembayaran"
               type="button"
               class="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#112D4E] py-3.5 text-white font-bold transition-all hover:bg-[#0F4C75] shadow-md shadow-blue-900/10 disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none cursor-pointer"
             >
               Bayar Sekarang
-            </a>
+            </button>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -119,7 +209,7 @@
     <script src="../script/checkout.js"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <script>
-      feather.replace()
+      feather.replace();
     </script>
   </body>
 </html>
